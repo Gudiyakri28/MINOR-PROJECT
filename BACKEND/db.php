@@ -1,12 +1,13 @@
 <?php
 $host = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'Waste2Wealth';
+$db = 'your_database_name';
+$user = 'your_username';
+$pass = 'your_password';
 
-$conn = new mysqli($host, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
 }
 ?>
