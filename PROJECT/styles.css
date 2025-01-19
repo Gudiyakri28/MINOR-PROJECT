@@ -63,10 +63,11 @@ header i {
 
 /* Sidebar Menu */
 #full {
+    font-family: 'Times New Roman', Times;
     height: 100vh;
     width: 20%;
     position: fixed;
-    background-color: rgba(24, 171, 24, 0.9);
+    background: linear-gradient(135deg, #80e0a7, #1eae91); /* Lighter green gradient */
     top: 0;
     right: -20%; /* Initially hidden */
     backdrop-filter: blur(10px);
@@ -76,14 +77,14 @@ header i {
 }
 
 #full h4 {
-    font-size: 35px;
+    font-size: 31px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
 #full h4 a {
     text-decoration: none;
-    color: black;
+    color: rgb(9, 67, 6);
 }
 
 #full i {
@@ -173,8 +174,8 @@ a{
     left: 50%;
     transform: translate(-50%, -50%); /* Center the video */
     width: 100%;
-    height: 80vh;
-    object-fit: contain; /* Ensure the full video fits without cutting */
+    height: 100%;
+    object-fit:none ; /* Ensure the full video fits without cutting */
     z-index: -1; /* Sends the video to the background */
     background-color: #ade8ab; /* Adds a background to fill empty spaces */
 }
@@ -220,4 +221,38 @@ a{
 
 .button:hover {
     background-color: #cadd1e;
+}
+/* Footer Section */
+footer {
+    background: linear-gradient(135deg, #053407, #2f7e33);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+footer ul li a:hover {
+    color: #ffdf00; /* Hover effect for links */
 }
